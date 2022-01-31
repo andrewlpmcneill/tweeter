@@ -2,6 +2,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 0 1.5em;
   height: 120px;
   width: 100%;
   background-color: #4056A1;
@@ -12,7 +13,6 @@ nav span {
   font-family: 'Bungee', sans-serif;
   font-size: 48px;
   padding: 0.5em 0;
-  margin: 0 1.5em;
   align-self: flex-end;
 }
 
@@ -24,7 +24,7 @@ nav div {
 
 nav h1 {
   align-self: center;
-  margin: 0 1.5em;
+  margin: 0 0;
   font-family: 'Source Sans Pro';
   font-weight: 300;
   font-size: 32px;
