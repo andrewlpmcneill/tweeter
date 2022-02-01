@@ -24,10 +24,15 @@
   border-bottom: 3px solid #665f54;
 }
 
+
 .submission-info {
   margin: 10px 0;
   font-family: 'Bungee', sans-serif;
   font-weight: 600;
   display: flex;
   justify-content: space-between;
+}
+
+.charactersExceeded {
+  color: red;
 }
