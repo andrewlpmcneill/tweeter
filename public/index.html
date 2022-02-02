@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
@@ -26,13 +27,16 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body>
+
       <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
@@ -44,13 +48,13 @@
     <!-- header -->
     <header>
       <div>
-          <img src="/images/profile-hex.png"> 
+          <img src="/images/profile-hex.png">
       </div>
       <div>
           <h2><strong>Andrew</strong> McNeill</h2>
       </div>
     </header>
-    <!-- New Tweets -->
+    <!-- Make New Tweets -->
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
@@ -63,29 +67,9 @@
           </div>
         </form>
       </section>
-      <article class="tweet-container">
-        <header>
-          <div>
-            <i class="fa-regular fa-face-angry"></i> <h4>Andrew</h4>
-          </div>
-          <div>
-            <p class="handle">@andrewmc</p>
-          </div>
-        </header>
-        <div class="tweet-body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies sit amet sem sollicitudin imperdiet.</p>
-        </div>
-        <footer>
-          <div class="date">
-            <span>10 days ago</span>
-          </div>
-          <div class="icons">
-            <i class="fas fa-flag"></i>
-            <i class="fas fa-retweet"></i>
-            <i class="fas fa-heart"></i>
-          </div>
-        </footer>
-      </article>
+      <!-- Display Tweets -->
+
     </main>
+    
   </body>
 </html>
