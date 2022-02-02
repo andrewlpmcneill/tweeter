@@ -24,13 +24,13 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 60px;
+  height: 64px;
   font-weight: 600;
 }
 
-.tweet-container i {
-  font-size: 60px;
-  color: #545149; opacity: 0.8;
+.tweet-container img {
+  margin-top: 0;
+  padding: 0;
 }
 
 .tweet-container h4 {
@@ -66,15 +66,11 @@
   gap: 7px;
 }
 
-.fas.fa-flag,
-.fas.fa-retweet,
-.fas.fa-heart {
+.tweet-container i {
   font-size: 16px;
   color: #4056A1; opacity: 1;
 }
 
-.fas.fa-flag:hover,
-.fas.fa-retweet:hover,
-.fas.fa-heart:hover {
+.tweet-container i:hover {
   color: #fcba03; opacity: 1;
 }
