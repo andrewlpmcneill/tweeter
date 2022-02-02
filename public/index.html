@@ -22,14 +22,14 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <!-- Tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-
-
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -50,8 +50,7 @@
           <h2><strong>Andrew</strong> McNeill</h2>
       </div>
     </header>
-    <!-- </div> -->
-    <!-- Page-specific (main) content here -->
+    <!-- New Tweets -->
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
@@ -64,6 +63,29 @@
           </div>
         </form>
       </section>
+      <article class="tweet-container">
+        <header>
+          <div>
+            <i class="fa-regular fa-face-angry"></i> <h4>Andrew</h4>
+          </div>
+          <div>
+            <p class="handle">@andrewmc</p>
+          </div>
+        </header>
+        <div class="tweet-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies sit amet sem sollicitudin imperdiet.</p>
+        </div>
+        <footer>
+          <div class="date">
+            <span>10 days ago</span>
+          </div>
+          <div class="icons">
+            <i class="fas fa-flag"></i>
+            <i class="fas fa-retweet"></i>
+            <i class="fas fa-heart"></i>
+          </div>
+        </footer>
+      </article>
     </main>
   </body>
 </html>
