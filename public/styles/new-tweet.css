@@ -1,11 +1,43 @@
-.new-tweet h2 {
-  font-weight: 300;
-  margin-bottom: 10px;
+.new-tweet {
+  margin-top: 30px;
 }
 
-.new-tweet label {
+.prompt {
+  font-size: 30px;
   font-weight: 600;
+  padding-bottom: 1em;
 }
+
+.error {
+  font-size: 14px;
+  position: absolute;
+  display: inline-block;
+  background: #c51244;
+  color: white;
+  padding: 8px 8px 8px 12px;
+  font-weight: 600;
+  box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.65);
+  border-radius: 6px;
+  margin-left: 8em;
+}
+
+.error:after {
+  content: "";
+  position:absolute;
+  margin-top:-1px;
+  margin-left:-10px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #c51244;
+  transform:rotate(180deg);
+  right: 133px; 
+  top: 4px;
+}
+
+#taOverMax:after {
+  right: 85px;
+}
+
 
 .new-tweet form button {
   font-family: 'Bungee', sans-serif;
@@ -15,6 +47,7 @@
 }
 
 .new-tweet form textarea {
+  margin-top: 1em;
   outline: none;
   background-color: transparent;
   width:100%;
