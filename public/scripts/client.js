@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
   $('.error').hide();
+  $('.fa-angle-double-up').hide();
+  $('.to-top').hide();
 
   $('#submitTweet').on('submit', (event => {
     event.preventDefault();
@@ -19,6 +21,25 @@ $(document).ready(function() {
         loadTweets('test');
       });
   }));
+
+  $('.new-tweet-toggle').on('click', function() {
+    $('.new-tweet').slideToggle();
+    $('.fa-angle-double-down').toggle();
+    $('.fa-angle-double-up').toggle();
+  });
+
+  $(window).scroll(function() {
+    $('.to-top').fadeIn();
+    if ($(window).scrollTop() === 0) {
+      $('.to-top').fadeOut(350);
+    }
+  });
+
+  $('.footer-icon').on('click', function() {
+    $('html').animate({
+      scrollTop: 0
+    }, "slow");
+  });
   
   const renderTweets = tweetArr => {
     tweetArr.forEach(tweet => {
