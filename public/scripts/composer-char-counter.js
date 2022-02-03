@@ -1,6 +1,7 @@
 $(document).ready(function() {
   
   $('#tweet-text').on('input', function() {
+    $('.error').hide();
     const numCharactersTyped = $(this).val().length;
     const count = 140 - numCharactersTyped;
     const counter = $(this).parent().children('.submission-info').children('.counter');
