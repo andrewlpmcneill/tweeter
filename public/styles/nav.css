@@ -39,4 +39,9 @@ nav h1 strong {
 nav i {
   align-self: center;
   color: red;
+  transition: transform 0.5s;
+}
+
+nav div:hover i {
+  transform: translateY(25%);
 }
