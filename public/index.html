@@ -57,18 +57,22 @@
     <!-- Make New Tweets -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
         <form id="submitTweet">
-          <label for="tweet-text">What are you humming about?</label>
+          <div class="labels">
+            <label for="tweet-text" class="prompt">What are you humming about?</label>
+          </div>
           <textarea name="text" id="tweet-text"></textarea>
           <div class="submission-info">
             <button type="submit">Tweet</button>
+            <label class="error" id="taEmpty">Tweet is empty!</label>
+            <label class="error" id="taOverMax">Too long!</label>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
-      <!-- Display Tweets -->
-
+      <div class="data-container">
+        <!-- Display Tweets -->
+      </div>
     </main>
     
   </body>
