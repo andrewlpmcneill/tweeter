@@ -1,41 +1,37 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-// eslint-disable-next-line no-undef
 $(document).ready(function() {
 
+  $('.error').hide();
+
   $('#submitTweet').on('submit', (event => {
-    console.log('Handler for submit() called');
     event.preventDefault();
     const data = $('#tweet-text');
-    if (!data.val() || data.val().length > 140) {
-      alert('Tweet content is empty, or too long');
+    if (!data.val()) {
+      $('#taEmpty').show();
+      return;
+    } else if (data.val().length > 140) {
+      $('#taOverMax').show();
       return;
     }
     const serializedData = data.serialize();
-    $.ajax({
-      method: "POST",
-      url: "/tweets",
-      data: serializedData
-    });
-
+    $.post("/tweets", serializedData)
+      .then(function(data) {
+        $("#tweet-text").val('');
+        loadTweets('test');
+      });
   }));
   
   const renderTweets = tweetArr => {
     tweetArr.forEach(tweet => {
-      $('.container').append(createTweetElement(tweet));
+      $('.data-container').prepend(createTweetElement(tweet));
     });
   };
 
   const createTweetElement = tweetObj => {
-  
     const name = tweetObj['user']['name'];
     const avatar = tweetObj['user']['avatars'];
     const handle = tweetObj['user']['handle'];
     const content = tweetObj['content']['text'];
+    const safeContent = escape(content);
     const time = tweetObj['created_at'];
 
     const output = `<article class="tweet-container">
@@ -49,7 +45,7 @@ $(document).ready(function() {
           </div>
         </header>
         <div class="tweet-body">
-          <p>${content}</p>
+          <p>${safeContent}</p>
         </div>
         <footer>
           <div class="date">
@@ -64,16 +60,28 @@ $(document).ready(function() {
       </article>`;
   
     return output;
-  
   };
 
-  const loadTweets = () => {
-
+  const loadTweets = (ifNew) => {
+    if (ifNew) {
+      $.ajax('/tweets', { method: 'GET' })
+        .then(function(data) {
+          renderTweets([data[data.length - 1]]);
+        });
+      return;
+    }
+    // $('.data-container').empty();
     $.ajax('/tweets', { method: 'GET' })
       .then(function(data) {
         renderTweets(data);
       });
 
+  };
+
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
   };
 
   loadTweets();
