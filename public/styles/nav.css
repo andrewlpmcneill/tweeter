@@ -18,6 +18,10 @@ nav span {
   align-self: flex-end;
 }
 
+.new-tweet-toggle {
+  cursor: pointer;
+}
+
 nav div {
   display: flex;
   flex-direction: column;
