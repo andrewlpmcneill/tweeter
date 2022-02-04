@@ -34,13 +34,13 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/tweets.js"></script>
 
   </head>
 
   <body>
 
-      <!-- Top nav bar (fixed) -->
+    <!-- Nav Bar -->
     <nav>
       <span>tweeter</span>
       <div class="new-tweet-toggle">
@@ -49,35 +49,42 @@
         <i class="fas fa-angle-double-up"></i>
       </div>
     </nav>
-    <!-- header -->
-    <header>
-      <div>
-          <img src="/images/profile-hex.png">
-      </div>
-      <div>
-          <h2><strong>Andrew</strong> McNeill</h2>
-      </div>
-    </header>
-    <!-- Make New Tweets -->
-    <main class="container">
-      <section class="new-tweet">
-        <form id="submitTweet">
-          <div class="labels">
-            <label for="tweet-text" class="prompt">What are you humming about?</label>
-          </div>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div class="submission-info">
-            <button type="submit">Tweet</button>
-            <label class="error" id="taEmpty">Tweet is empty!</label>
-            <label class="error" id="taOverMax">Too long!</label>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <div class="data-container">
-        <!-- Display Tweets -->
-      </div>
-    </main>
+
+    <!-- Header/Avatar -->
+    <div class="content">
+      <header>
+        <div>
+            <img src="/images/profile-hex.png">
+        </div>
+        <div>
+            <h2><strong>Jennifer</strong> McTester</h2>
+        </div>
+      </header>
+
+      <main class="container">
+        <!-- Make New Tweets -->
+        <section class="new-tweet">
+          <form id="submitTweet">
+            <div class="labels">
+              <label for="tweet-text" class="prompt">What are you humming about?</label>
+            </div>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class="submission-info">
+              <button type="submit">Tweet</button>
+              <label class="error" id="taEmpty">Tweet is empty!</label>
+              <label class="error" id="taOverMax">Too long!</label>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+
+        <div class="data-container">
+          <!-- Display Tweets -->
+        </div>
+      </main>
+    </div>
+
+    <!-- Toggleable, fixed 'To Top' button -->
     <footer class="to-top">
       <div class="footer-icon">
         <i class="fa-solid fa-angles-up circle-icon"></i>
