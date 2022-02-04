@@ -27,3 +27,17 @@ header h2 {
 header h2 strong {
   font-weight: 600;
 }
+
+@media only screen and (min-width: 1024px) {
+
+  header {
+    height: 400px;
+    margin: 8em 3em 3em 3em;
+    max-width: 35%;
+  }
+
+  header div img {
+    margin-top: 0;
+  }
+
+}
