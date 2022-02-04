@@ -22,3 +22,7 @@ Tweeter is responsive to desktop and tablet/mobile sizing. It features form togg
 - jQuery (CDN)
 
 ## Final Product
+
+
+!["Mobile Views"](https://github.com/andrewlpmcneill/tweeter/blob/master/docs/mobile-view.png?raw=true)
+!["Desktop View"](https://github.com/andrewlpmcneill/tweeter/blob/master/docs/desktop-view.png?raw=true)
